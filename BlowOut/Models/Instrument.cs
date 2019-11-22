@@ -16,7 +16,6 @@ namespace BlowOut.Models
         public string sInstrumentDesc { get; set; }
         public bool bInstrumentType  { get; set; }
         public decimal dInstrumentPrice { get; set; }
-        [ForeignKey("Customer")]
         public int iCustomerID { get; set; }
 
 
