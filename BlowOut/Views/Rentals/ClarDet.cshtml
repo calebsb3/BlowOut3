@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "ClarDet";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/Newstyles.css" />
+</head>
+
+<h2>Clarinet Details</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <img class="pics" src="~/Content/Images/Clarinet.jpg" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            @Html.ActionLink("Show New Price", "NewUsedPrice", "Rentals", new { stype = "New", instrumentID = "Clarinet"}, null)
+        </div>
+        <div class="col-lg-6">
+            @Html.ActionLink("Show Used Price", "NewUsedPrice", "Rentals", new { stype = "Used", instrumentID = "Clarinet" }, null)
+        </div>
+    </div>
+</div>
+

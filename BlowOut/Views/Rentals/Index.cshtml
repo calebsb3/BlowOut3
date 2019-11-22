@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/Newstyles.css" />
+</head>
+
+<h2>Index</h2>
+
+<div class="container" >
+    <div class="row" style="padding-bottom:20px">
+        <div class="col-lg-4 btn">
+            <a href="@Url.Action("TrumpetDet", "Rentals")">
+                <img class="card-body pics" src="~/Content/Images/trumpet.jpg" />
+            </a>
+           
+        </div>
+        <div class="col-lg-4 btn">
+            <a href="@Url.Action("TromboneDet", "Rentals" )">
+                <img class="card-body pics" src="~/Content/Images/trombone.jpg" />
+            </a>
+                
+        </div>
+        <div class="col-lg-4 btn">
+            <a href="@Url.Action("TubaDet", "Rentals" )">
+                <img class="card-body pics" src="~/Content/Images/tuba.jpg" />
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 btn">
+            <a href="@Url.Action("FluteDet", "Rentals" )">
+                <img class="card-body pics" src="~/Content/Images/flute.jpg" />
+            </a>
+        </div>
+        <div class="col-lg-4 btn">
+            <a href="@Url.Action("ClarDet", "Rentals" )">
+                <img class="card-body pics" src="~/Content/Images/Clarinet.jpg" />
+             </a>
+        </div>
+        <div class="col-lg-4 btn">
+            <a href="@Url.Action("SaxDet" ,"Rentals" )">
+                <img class="card-body pics" src="~/Content/Images/Saxophone.jpg" />
+            </a>
+        </div>
+    </div>
+</div>
+
