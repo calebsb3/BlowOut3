@@ -1,0 +1,66 @@
+﻿@model BlowOut.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sCustFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sCustFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sCustLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sCustLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sCustAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sCustAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sCustState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sCustState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sCustCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sCustCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.iCustZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.iCustZip)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sCustID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

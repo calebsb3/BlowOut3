@@ -155,6 +155,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="DAL\BlowOutContext.cs" />
@@ -224,6 +225,11 @@
     <Content Include="Views\Rentals\TromboneDet.cshtml" />
     <Content Include="Views\Rentals\TubaDet.cshtml" />
     <Content Include="Views\Rentals\Detail.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
     <None Include="Views\Rentals\FluteDet.cshtml" />
     <Content Include="Views\Rentals\ClarDet.cshtml" />
     <Content Include="Views\Rentals\SaxDet.cshtml" />
