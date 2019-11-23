@@ -48,13 +48,13 @@ namespace BlowOut.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "iCustomerID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip")] Customer customer)
+        public ActionResult Create([Bind(Include = "iCustomerID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip,cCustPhone,cCustEmail")] Customer customer)
         {
             if (ModelState.IsValid)
             {
                 db.Customers.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Customers");
             }
 
             return View(customer);

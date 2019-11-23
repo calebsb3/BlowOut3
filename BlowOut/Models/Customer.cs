@@ -32,12 +32,10 @@ namespace BlowOut.Models
         public int iCustZip { get; set; }
 
         [Display(Name = "Primary Phone")]
-        [Phone]
-        public char cCustPhone { get; set; }
+        public string cCustPhone { get; set; }
 
         [Display(Name = "Email")]
-        [EmailAddress]
-        public char cCustEmail { get; set; }
+        public string cCustEmail { get; set; }
 
         [Key]
         [Required]
