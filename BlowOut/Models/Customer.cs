@@ -28,8 +28,7 @@ namespace BlowOut.Models
         public string sCustCity { get; set; }
 
         [Display(Name = "Zip Code")]
-        [MinLength(5)]
-        [MaxLength(5)]
+        [Range(5,5)]
         public int iCustZip { get; set; }
 
         [Display(Name = "Primary Phone")]
