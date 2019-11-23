@@ -209,6 +209,7 @@
     <Content Include="Views\Rentals\TromboneDet.cshtml" />
     <Content Include="Views\Rentals\TubaDet.cshtml" />
     <Content Include="Views\Rentals\Detail.cshtml" />
+
     <None Include="Views\Rentals\FluteDet.cshtml" />
     <Content Include="Views\Rentals\ClarDet.cshtml" />
     <Content Include="Views\Rentals\SaxDet.cshtml" />
