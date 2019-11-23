@@ -17,7 +17,7 @@ namespace BlowOut.Models
         public bool bInstrumentType  { get; set; }
         public decimal dInstrumentPrice { get; set; }
         public int? iCustomerID { get; set; }
-
+        public string sImageFileName { get; set; }
 
     }
 }
