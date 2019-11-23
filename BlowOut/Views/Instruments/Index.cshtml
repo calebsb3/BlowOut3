@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BlowOut.Models.Instrument>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/Newstyles.css" />
+</head>
+
+<h2>Index</h2>
+
+<div class="container">
+    <div class="row" style="padding-bottom:20px">
+        @foreach (var item in Model)
+        {
+
+            @Html.DisplayFor(modelitem => item.sInstrumentDesc)
+            <br />
+            <div class="col-lg-4 btn">
+                <a href="@Url.Action("Create", "Customers", new {id= item.iInstrumentID})">
+                    <img class="card-body pics" src="~/Content/Images/@Html.DisplayFor(modelitem => item.sImageFileName)" />
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+

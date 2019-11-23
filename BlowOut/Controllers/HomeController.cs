@@ -30,5 +30,10 @@ namespace BlowOut.Controllers
 
             return View();
         }
+
+        public ActionResult Rentals()
+        {
+            return View(db.Instruments.ToList());
+        }
     }
 }

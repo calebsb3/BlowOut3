@@ -15,7 +15,9 @@ namespace BlowOut
     {
         protected void Application_Start()
         {
+            //This turns off an entity framework feature that can be used to create databases, drop databases, etc.
             Database.SetInitializer<BlowOutContext>(null);
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             //This is just a list of routes
