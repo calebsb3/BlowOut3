@@ -58,9 +58,27 @@
             @Html.DisplayFor(model => model.iCustZip)
         </dd>
 
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cCustEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cCustEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cCustPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cCustPhone)
+        </dd>
+
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.sCustID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.iCustomerID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
