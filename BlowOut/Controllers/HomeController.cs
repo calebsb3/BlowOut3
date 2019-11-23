@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BlowOut.DAL;
+using BlowOut.Models;
 
 namespace BlowOut.Controllers
 {
     public class HomeController : Controller
     {
+        private BlowOutContext db = new BlowOutContext();
+
         public ActionResult Index()
         {
             return View();

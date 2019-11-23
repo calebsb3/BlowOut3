@@ -36,6 +36,7 @@ namespace BlowOut.Controllers
             return View(customer);
         }
 
+        
         // GET: Customers/Create
         public ActionResult Create()
         {
@@ -47,7 +48,7 @@ namespace BlowOut.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "sCustID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip")] Customer customer)
+        public ActionResult Create([Bind(Include = "iCustomerID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +80,7 @@ namespace BlowOut.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "sCustID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip")] Customer customer)
+        public ActionResult Edit([Bind(Include = "iCustomerID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip")] Customer customer)
         {
             if (ModelState.IsValid)
             {

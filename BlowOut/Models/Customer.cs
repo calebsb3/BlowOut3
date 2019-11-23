@@ -28,7 +28,7 @@ namespace BlowOut.Models
         public string sCustCity { get; set; }
 
         [Display(Name = "Zip Code")]
-        [Range(5,5)]
+      //  [Range(0,5)]
         public int iCustZip { get; set; }
 
         [Display(Name = "Primary Phone")]
@@ -41,6 +41,6 @@ namespace BlowOut.Models
 
         [Key]
         [Required]
-        public int sCustID { get; set; }
+        public int iCustomerID { get; set; }
     }
 }
