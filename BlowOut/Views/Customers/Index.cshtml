@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BlowOut.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sCustFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sCustLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sCustAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sCustState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sCustCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.iCustZip)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sCustFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sCustLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sCustAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sCustState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sCustCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.iCustZip)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.iCustomerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.iCustomerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.iCustomerID })
+        </td>
+    </tr>
+}
+
+</table>
