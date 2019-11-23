@@ -171,10 +171,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\audio-e-guitars-guitars-music-6966.jpg" />
+    <Content Include="Content\Images\BlowOutOwner1.jpg" />
+    <Content Include="Content\Images\BlowOutStorePic.jpg" />
     <Content Include="Content\Images\Clarinet.jpg" />
     <Content Include="Content\Images\flute.jpg" />
     <Content Include="Content\Images\Saxophone.jpg" />
     <Content Include="Content\Images\trombone.jpg" />
+    <Content Include="Content\Images\trumpetstore.jpg" />
     <Content Include="Content\Images\trumpet.jpg" />
     <Content Include="Content\Images\tuba.jpg" />
     <Content Include="Content\Newstyles.css" />
