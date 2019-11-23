@@ -28,13 +28,15 @@ namespace BlowOut.Models
         public string sCustCity { get; set; }
 
         [Display(Name = "Zip Code")]
-      //  [Range(0,5)]
+        [Range(10000,99999)]
         public int iCustZip { get; set; }
 
         [Display(Name = "Primary Phone")]
+        [Phone(ErrorMessage ="Please enter a valid phone number")]
         public string cCustPhone { get; set; }
 
         [Display(Name = "Email")]
+        [EmailAddress(ErrorMessage ="Please enter a valid email address")]
         public string cCustEmail { get; set; }
 
         [Key]

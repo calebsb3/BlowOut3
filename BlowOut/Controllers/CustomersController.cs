@@ -38,8 +38,9 @@ namespace BlowOut.Controllers
 
         
         // GET: Customers/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
+            ViewBag.id = id;
             return View();
         }
 
@@ -48,16 +49,38 @@ namespace BlowOut.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "iCustomerID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip,cCustPhone,cCustEmail")] Customer customer)
+        public ActionResult Create([Bind(Include = "iCustomerID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip,cCustPhone,cCustEmail")] Customer customer, int id)
         {
             if (ModelState.IsValid)
             {
+                //First we need to create a new Instrument object to point to the instrument we clicked on in the InstrumentsController.
+                Instrument instrument = db.Instruments.Find(id);
+
+                //then we assign our instrument's customerID to the customer's ID we just created.
+                instrument.iCustomerID = customer.iCustomerID;
+
+                //Now we add the customer to our database
                 db.Customers.Add(customer);
+                //db.Entry(Instrument).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index", "Customers");
+
+                //Go to our summary action.
+                return RedirectToAction("Summary", new { CustomerID = customer.iCustomerID, InstrumentID = instrument.iInstrumentID });
             }
 
             return View(customer);
+        }
+
+        public ActionResult Summary(int CustomerID, int InstrumentID)
+        {
+            Customer customer = db.Customers.Find(CustomerID);
+            Instrument instrument = db.Instruments.Find(InstrumentID);
+
+            ViewBag.customer = customer;
+            ViewBag.instrument = instrument;
+
+            return View();
+
         }
 
         // GET: Customers/Edit/5
