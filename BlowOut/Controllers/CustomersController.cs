@@ -103,7 +103,7 @@ namespace BlowOut.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "iCustomerID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip")] Customer customer)
+        public ActionResult Edit([Bind(Include = "iCustomerID,sCustFirstName,sCustLastName,sCustAddress,sCustState,sCustCity,iCustZip,cCustPhone,cCustEmail")] Customer customer)
         {
             if (ModelState.IsValid)
             {
