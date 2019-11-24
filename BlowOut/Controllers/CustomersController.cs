@@ -14,6 +14,7 @@ namespace BlowOut.Controllers
     public class CustomersController : Controller
     {
         private BlowOutContext db = new BlowOutContext();
+        public decimal price = 0;
 
         // GET: Customers
         public ActionResult Index()
@@ -56,14 +57,19 @@ namespace BlowOut.Controllers
                 //First we need to create a new Instrument object to point to the instrument we clicked on in the InstrumentsController.
                 Instrument instrument = db.Instruments.Find(id);
 
-                //then we assign our instrument's customerID to the customer's ID we just created.
-                instrument.iCustomerID = customer.iCustomerID;
-
                 //Now we add the customer to our database
                 db.Customers.Add(customer);
+
                 //db.Entry(Instrument).State = EntityState.Modified;
                 db.SaveChanges();
 
+
+                //then we assign our instrument's customerID to the customer's ID we just created.
+                instrument.iCustomerID = customer.iCustomerID;
+
+                
+
+                
                 //Go to our summary action.
                 return RedirectToAction("Summary", new { CustomerID = customer.iCustomerID, InstrumentID = instrument.iInstrumentID });
             }
@@ -76,8 +82,13 @@ namespace BlowOut.Controllers
             Customer customer = db.Customers.Find(CustomerID);
             Instrument instrument = db.Instruments.Find(InstrumentID);
 
+            //calculate the total price after 18 months
+            price = instrument.dInstrumentPrice * 18;
+
+
             ViewBag.customer = customer;
             ViewBag.instrument = instrument;
+            ViewBag.totalprice = price;
 
             return View();
 

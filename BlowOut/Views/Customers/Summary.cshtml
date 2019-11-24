@@ -7,3 +7,23 @@
 
 Thank you @ViewBag.customer.sCustFirstName for ordering a @ViewBag.instrument.sInstrumentDesc 
 
+<div class="jumbotron">
+    <ul>
+        <li>Order Number: @ViewBag.customer.iCustomerID</li>
+        <li>Instrument: @ViewBag.instrument.sInstrumentDesc </li>
+
+        @if (ViewBag.instrument.bInstrumentType == true)
+        {
+            <li>Type: New </li>
+        }
+        else
+        {
+            <li>Type: Used </li>
+        }
+
+        <li>@ViewBag.instrument.sImageFileName </li>
+        <li>Monthly price: @ViewBag.instrument.dInstrumentPrice </li>
+        <li>Total (18 months): @ViewBag.totalprice</li>
+    </ul>
+</div>
+
