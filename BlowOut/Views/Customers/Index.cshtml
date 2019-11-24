@@ -29,6 +29,12 @@
         <th>
             @Html.DisplayNameFor(model => model.iCustZip)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cCustEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cCustPhone)
+        </th>
         <th></th>
     </tr>
 
@@ -52,10 +58,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.iCustZip)
         </td>
+
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.iCustomerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.iCustomerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.iCustomerID })
+            @Html.DisplayFor(modelItem => item.cCustEmail)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.cCustPhone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.iCustomerID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.iCustomerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.iCustomerID })
         </td>
     </tr>
 }
