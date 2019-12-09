@@ -58,7 +58,7 @@ namespace BlowOut.Controllers
 
                 //then we assign our instrument's customerID to the customer's ID we just created.
                 instrument.iCustomerID = customer.iCustomerID;
-
+                    
                 //Now we add the customer to our database
                 db.Customers.Add(customer);
                 //db.Entry(Instrument).State = EntityState.Modified;
