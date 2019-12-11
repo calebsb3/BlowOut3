@@ -65,8 +65,10 @@ namespace BlowOut.Controllers
 
 
                 //then we assign our instrument's customerID to the customer's ID we just created.
-                instrument.iCustomerID = customer.iCustomerID;
-
+                db.Database.ExecuteSqlCommand(
+                    "UPDATE Instrument " +
+                    "SET iCustomerID = " + customer.iCustomerID +
+                    " WHERE iInstrumentID = " + instrument.iInstrumentID);
                 
 
                 

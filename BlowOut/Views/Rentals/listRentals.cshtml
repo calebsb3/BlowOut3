@@ -3,10 +3,26 @@
     ViewBag.Title = "listRentals";
 }
 
-<h2>listRentals</h2>
+<h2>List of Orders</h2>
 
 @foreach (var item in Model)
 {
+    @Html.DisplayFor(model => item.instruments.iInstrumentID)
+
+    @Html.DisplayFor(model => item.instruments.sInstrumentDesc)
+    @Html.DisplayFor(model => item.instruments.bInstrumentType)
+    @Html.DisplayFor(model => item.instruments.dInstrumentPrice)
+    @Html.DisplayFor(model => item.instruments.sImageFileName)
+    <br />
+    @Html.DisplayFor(model => item.customers.iCustomerID)
+    @Html.DisplayFor(model => item.customers.sCustFirstName)
+    @Html.DisplayFor(model => item.customers.sCustLastName)
+    @Html.DisplayFor(model => item.customers.sCustAddress)
+    @Html.DisplayFor(model => item.customers.sCustCity)
+    @Html.DisplayFor(model => item.customers.sCustState)
+    @Html.DisplayFor(model => item.customers.iCustZip)
+    @Html.DisplayFor(model => item.customers.cCustPhone)
+    @Html.DisplayFor(model => item.customers.cCustEmail)
 
 }
 
